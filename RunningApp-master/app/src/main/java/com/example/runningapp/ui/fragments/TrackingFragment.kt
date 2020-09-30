@@ -200,9 +200,9 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
                 distanceInMeters += TrackingUtility.calculatePolylineLength(polyLine).toInt()
             }
             val averageSpeed =
-                round((distanceInMeters / 1000f) / (curTimeInMillis / 1000f / 60 / 60) * 10) / 10f
+                round(distanceInMeters / 1000f / (curTimeInMillis / 1000f / 60 / 60) * 10) / 10f
             val dateTimeStamp = Calendar.getInstance().timeInMillis
-            val caloriesBurned = ((distanceInMeters / 1000f) * weight).toInt()
+            val caloriesBurned = (distanceInMeters / 1000f * weight).toInt()
             val run = Run(bmp,dateTimeStamp, averageSpeed, distanceInMeters, curTimeInMillis, caloriesBurned)
             viewModel.insertRun(run)
             Snackbar.make(
