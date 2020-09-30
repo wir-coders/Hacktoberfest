@@ -1,0 +1,40 @@
+public class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+    	if(nums.length <= 0) return 0;
+    	int diff = 10000;
+    	int result = 10000;
+    	int least = 10000;
+    	int sum = 0;
+    	Arrays.sort(nums); // sort array
+     
+    	for(int i = 0; i < nums.length - 1; i++) {
+    		sum = 0;
+    		int x = i;
+    		int y = i + 1;
+    		int z = nums.length - 1;
+    		
+    		while(y < z) {
+    			sum = nums[x] + nums[y] + nums[z];
+    			
+    			diff = Math.abs(sum - target);
+
+    			
+    			if(diff < least) {
+    				least = diff;
+    				result = sum;
+    			}
+    			
+    			if(sum > target) {
+    				z--;
+    			}
+    			else {
+    				y++;
+    			}
+    		}
+    	}
+    	
+        System.out.println(result);
+		return result;
+        
+    }
+}
