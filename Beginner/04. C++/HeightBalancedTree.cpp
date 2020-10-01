@@ -55,7 +55,6 @@ node* buildTreeFromArray(int ar[], int s, int e){
 	return root;
 }
 int main(){
-	
 	int ar[]= {1,2,3,4,5,6,7};
 	int n = sizeof(ar)/sizeof(n);
 	node* root = buildTreeFromArray(ar,0,n-1);
