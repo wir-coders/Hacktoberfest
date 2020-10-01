@@ -1,0 +1,5 @@
+- Name - Revanth Reddy
+- Academic Institution - National Institute of Technology Durgapur
+- Email - malerevanthreddy3099@gmail.com
+- Interests - Dev Dev Dev
+- Quote - "Code Eat Sleep Repeat"
