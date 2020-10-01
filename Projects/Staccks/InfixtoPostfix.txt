@@ -1,0 +1,56 @@
+import java.lang.*;
+import java.io.*;
+class infixto postfix
+ {
+	public static void main (String[] args)
+	 {
+	    Scanner sc = new Scanner(System.in);
+	    int t = sc.nextInt();
+	    String str;
+	    char ch;
+	    for(int tc = 0; tc < t; tc++){
+	        str = sc.next();
+	        Map<Character,Integer> m = new HashMap<>();
+	        Stack<Character> s = new Stack<>();
+	        m.put('(',0);
+	        m.put('-',1);
+	        m.put('+',1);
+	        m.put('*',2);
+	        m.put('/',2);
+	        m.put('^',3);
+	        for(int i = 0; i < str.length(); i++){
+	            ch = str.charAt(i);
+	            if(ch == '(')
+	                s.push(ch);
+	           else{
+	                if(m.containsKey(ch)){
+	                        if(s.isEmpty())
+	                            s.push(ch);
+	                        else{
+	                             while(!s.isEmpty() && m.get(ch) <= m.get(s.peek()))
+	                                    System.out.print(s.pop());
+	                               s.push(ch);
+	                            }
+	                    }
+	                else{
+	                    if(ch != ')')
+	                        System.out.print(ch);
+	                    else{
+	                        while(!s.isEmpty()){
+	                            if(s.peek() != '(')
+	                                System.out.print(s.pop());
+	                            else{
+	                                s.pop();
+	                                break;
+	                            }
+	                                }
+	                         }
+	                    }
+	            }
+	        }
+	        while(!s.isEmpty())
+	                 System.out.print(s.pop());
+	        System.out.println();
+	    }
+	 }
+}
