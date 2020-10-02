@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Title
+        </title>
+        <style>
+            body{
+                color: black;
+                background-color: white;
+                padding: 25px;
+                font-size: 25px;
+            }
+            .dark-mode{
+               
+                background-color: black;
+                color: white;
+                
+
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Toggle Dark/Light Mode</h2>
+        <p>Hi!My name is Sanchi Gupta and i am learning frontend development</p>
+        <button onclick="toggleTheme()">Switch Theme</button>
+        <script>
+            function toggleTheme(){
+                var element=document.body;
+                element.classList.toggle('dark-mode');
+
+            }
+        </script>
+    </body>
+</html>
+
