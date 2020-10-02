@@ -11,7 +11,7 @@ CLASS_ID = 'id'
 CLASS_CLASS = 'class'
 SPAN_24K = "lblrate24K"
 SPAN_22K = "lblrate22K"
-STRF_TIME = "%d-%m-%yyyy %H:%M  GMT +5:30" \
+STRF_TIME = "%d-%m-%y %H:%M  GMT +5:30" \
             " Asia/Kolkata"
 
 
