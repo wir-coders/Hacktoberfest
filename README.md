@@ -124,7 +124,7 @@ To sync your fork, from the directory of your local repository in a terminal win
 
 ##### ` git fetch upstream `
 
-Switch to the local master branch of our repository:
+Switch  to the local master branch of our repository:
 
 ##### ` git checkout master `
 
