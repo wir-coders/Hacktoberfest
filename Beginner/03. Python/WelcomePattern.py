@@ -1,4 +1,4 @@
-print("Mat size must be M * N. ( Mis an odd natural number, and N is 3 timesM ")
+print("Mat size must be M * N,  M is an odd natural number, and N is 3 times M ")
 a=int(input('Enter value of M'))
 b=int(input('Enter value of N'))
 x=3
