@@ -8,8 +8,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
+*{
   box-sizing: border-box;
+}
+
+h2{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+p{
+  padding-bottom: 1rem;
+}
+
+.instructions{
+  background-color: #f0efeb;
 }
 
 /* style the container */
@@ -135,8 +148,10 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h2>Responsive Social Login Form</h2>
-<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
+<div class = "instructions">
+  <h2>Responsive Social Login Form</h2>
+  <p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
+</div>
 
 <div class="container">
   <form action="/action_page.php">
