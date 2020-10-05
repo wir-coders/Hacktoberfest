@@ -20,7 +20,6 @@
         padding: 0;
         display: grid;
         grid-template-columns: auto;
-        /* grid-template-rows: 8% 7% auto 8%; */
         grid-template-areas:
                             " profile-top "
                             "search-box "
