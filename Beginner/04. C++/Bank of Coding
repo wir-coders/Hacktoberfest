@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int pin,tries;
+  cout << "BANK OF CODING"<<endl<<endl;
+  cout << "Enter your PIN: ";
+  cin >> pin; 
+  if(pin<1000 || pin>9999){
+  	cout<<"Please enter four digit PIN:";
+  	cin>>pin;
+	cout<<"tries: "<<tries<<endl;
+	tries++;
+	}
+  while (pin != 1234 && tries <= 3) {
+    cout <<endl << "Enter your PIN: ";
+    cin >> pin;
+    cout<<"tries: "<<tries<<endl;
+	tries++; 
+   }
+   if (pin == 1234) {
+    cout << "PIN accepted!"<<endl;
+    cout << "You now have access."<<endl;  
+  } 
+
+}
