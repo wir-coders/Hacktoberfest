@@ -34,7 +34,6 @@
 #chat-name-top
 {
     background-color:rgb(235, 235, 224);
-    /* border-radius: 10px 0 0 0; */
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
 }
 
@@ -105,17 +104,13 @@
 #my-chat{
     font-size: 15px;
     background-color: #c1fba4;
-    /*border-radius: 10%;*/
     padding: 1rem;
-    /*padding-top: 0.5rem;*/
 }
 
 #other-chat{
     font-size: 15px;
     background-color: ivory;
-    /*border-radius: 10%;*/
     padding: 1rem;
-    /*padding-top: 0.5rem;*/
 }
 
 #profile-top{
@@ -192,11 +187,6 @@
     grid-area: chat-name-top;
     display: flex;
     align-items: center;
-    
-    /* display: grid;
-    grid-template-columns: 15% 50% 7% 7% 7%;
-    align-content: center;
-    align-items: center; */
 }
 
 
