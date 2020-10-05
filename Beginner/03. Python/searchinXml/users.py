@@ -20,7 +20,7 @@ print(now)
 # The main part of the sql
 sql = "INSERT INTO users VALUES ("
 
-#try: ***when it will insert in a data base****
+# ***when it will insert in a data base**** try:
 for user in root:
     sql = sql +"'"+str(user.get('Id')).replace("'","´")+"',"
     sql = sql +"'"+str(user.get('Reputation')).replace("'","´")+"',"
@@ -39,7 +39,7 @@ for user in root:
     # then you need to execute the sql sentence with pymysql 
     print(sql)
 # If an error from the pymysql    
-#except e: ***change it to the appropriate error***
+#***change it to the appropriate error*** except e: 
 #    print(sql)
  
 # Commit your connection mith pymysql 
