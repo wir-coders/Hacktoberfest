@@ -11,6 +11,7 @@
                         "chat-container main-chat"
                         "chat-container chat-text-area";
 }
+
 @media only screen and (max-width: 768px)
 {
     #main-container{
@@ -28,7 +29,6 @@
                             "main-chat"
                             "chat-text-area";
     }
-
 }
 
 #profile-top,
@@ -38,12 +38,21 @@
     /* border-radius: 10px 0 0 0; */
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
 }
+
 #search-box,
 #chat-text-area
 {
     background-color:rgb(245, 245, 239);
-    
 }
+
+#chat-text{
+    padding: 1.2rem;
+}
+
+#search-input-chat{
+    padding: 0.8rem;
+}
+
 #main-chat
 {
     background-image: url("chat-bg.png");
@@ -51,44 +60,63 @@
     grid-area: main-chat;
     overflow-y: scroll;
 }
+
 .chat-row{
     margin-bottom: 20px;
     display: grid;
-    margin: 50px ;
+    margin: 30px ;
 }
+
 .text{
     padding: 9px 14px;
     font-size:1.6 rem;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
+
 .time{
     font-size: 10px;
+    padding-bottom: 0.5rem;
 }
 
 .my{
     background:rgb(217, 255, 102);
     border: 1px solid rgb(217, 255, 102);
     border-radius: 14px 14px 0;
-    justify-content: end;
+    justify-content: flex-start;
+    width: 60%;
+    line-height: 50%;
+    background-color: #c1fba4;
+    padding-top: 0.2rem;
     justify-items: end;
+    font-family: 'Volkhov', serif;
 }
+
 .other{
     background:ivory ;
     border: 1px solid ivory;
     border-radius: 14px 14px 14px 0;
-    justify-content: start;
+    margin-left: 12rem;
+    line-height: 50%;
+    padding-top: 0.2rem;
+    justify-content: flex-end;
     justify-items: start;
+    font-family: 'Volkhov', serif;
 }
 
 #my-chat{
     font-size: 15px;
-    background-color: rgb(217, 255, 102);
-    border-radius: 20%;
+    background-color: #c1fba4;
+    /*border-radius: 10%;*/
+    padding: 1rem;
+    /*padding-top: 0.5rem;*/
 }
+
 #other-chat{
     font-size: 15px;
     background-color: ivory;
-    border-radius: 20%;
+    /*border-radius: 10%;*/
+    padding: 1rem;
+    /*padding-top: 0.5rem;*/
 }
 
 #profile-top{
@@ -97,21 +125,24 @@
     grid: 36px/1fr 36px 36px 36px ;
     align-content: center;
 }
+
 #search-box{
     grid-area: search-box;
     display: grid;
     align-items: center;
-    
 }
+
 #search-box input{
     border-radius:10px;
-      -moz-border-radius:10px;
-      -webkit-border-radius:10px;
-      margin-left: 20px;
-      margin-right: 20px;
-      border: 0;
-      cursor: pointer;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0;
+    cursor: pointer;
+    padding: 1.2rem;
 }
+
 #chat-container{
     grid-area: chat-container;
     overflow-y: scroll;
@@ -123,30 +154,38 @@
     font-size: 1.3rem;
     border-bottom: 1px solid gray;
     padding:20px 20px 20px 15px;
+    line-height: 90%;
     cursor: pointer;
 }
 
 .chat-list:hover,
 .chat-list:active{
-    background-color: grey;
+    background-color: #8d99ae;
 }
+
 .active{
-     background-color: grey;
+     background-color: #8d99ae;
 }
+
 .chat-list > img{
     grid-row: span 2;
     height: 40px;
     border-radius: 100%;
 }
+
 .chat-title{
-    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.15rem;
+    padding-bottom: 0.2rem;
 }
+
 .chat-date{
-    font-size: 10px;
+    font-size: 14px;
 }
-.chat-message{
-    
-    font-size:20px ;
+
+.chat-message{ 
+    font-size: 16px;
+    font-family: 'Volkhov', serif;
 }
 
 #chat-name-top
@@ -163,10 +202,11 @@
 
 
 #ChatName{
-    font-family: monospace;
+    font-family: 'Acme', sans-serif;
     flex: 6;
     padding-left: 10px;
-    }
+    font-size: 1.2rem;
+}
 
 
 #chat-text-area{
@@ -174,8 +214,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 5fr 1fr;
     align-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 #chat-text-area input{
@@ -196,29 +235,46 @@
     cursor: pointer;
 }
 
+#status{
+    height: 25px;
+    padding: 1px;
+    margin-top: 5px;
+    padding-right: 4px;
+    cursor: pointer;
+}
 
-#status,
-#message,
-#menu,
-#search,
+#message, #menu, #menu2{
+    height: 27.5px;
+    padding: 1px;
+    margin-top: 5px;
+    padding: 0 5px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#search{
+    height: 25px;
+    padding: 1px;
+    margin-top: 5px;
+    padding: 0 5px;
+    padding-right: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
 #attatchments,
-#menu2,
 #mic{
-    height: 20px;
+    height: 27.5px;
     padding: 1px;
     margin-top: 5px;
     padding: 0 5px;
     cursor: pointer;
-    }
+}
 
-    #smiley{
-        height: 20px;
-        padding: 1px;
-        margin-top: 5px;
-        padding: 0 35px;
-        cursor: pointer;
-        }
-
-    
-
-
+#smiley{
+    height: 30px;
+    padding: 1px;
+    margin-top: 5px;
+    padding: 0 35px;
+    cursor: pointer;
+}
