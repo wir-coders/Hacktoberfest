@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Popup Form</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html{
+	background-image: url('https://cdn.wallpapersafari.com/20/43/ln8dUG.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 23px;
+	font-family: cursive;
+}
+button{
+	font-size: 22px;
+	padding: 8px 13px;
+	margin: 2%;
+	border-radius: 10px;
+	font-family: cursive;
+}
+label{
+  margin-left: 4%;
+ }
+.open{
+	width: 18%;
+	position: absolute;
+	color: #1a1a1a;
+	opacity: 0.9;
+	top: 78%;left: 3%;
+	background-color: peru;
+	border: 1px solid saddlebrown;
+}
+input{
+	padding: 4px 8px;
+	font-size: 19px;
+	width: 98%;
+	margin: 2%;
+	border: transparent;
+	background-color: transparent;
+	border-bottom: 2px solid #262626;
+}
+form{
+	border: 6px double forestgreen;
+	border-radius: 8%;
+	position: absolute;
+	padding: 10px;
+}
+h2{
+  text-align: center;
+  padding-bottom: 3px;
+  border-bottom: 2px solid palegreen;
+ }
+.login{
+  width: 97%;
+  background-color: #00cc00;
+  border: 1px solid darkgreen;
+ }
+.login:hover{
+  background-color: #00e600;
+}
+.close{
+  width: 97%;
+  background-color: #e60000;
+  border: 1px red #cc0000;
+ }
+.close:hover{
+  background-color: #ff3333;
+ }
+.pop{
+  display: none;
+ }
+</style>
+<script type="text/javascript">
+	function openform() {
+		document.getElementById("popup").style.display = "block";
+	}
+	function closeform() {
+		document.getElementById("popup").style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<h1>Popup Form</h1>
+	<p>
+Click on the button at the bottom to open the login form.</p>
+<button type="submit" onclick="openform()" class="open"> <img src="https://www.pngkit.com/png/detail/29-296571_google-forms-icon-free-download-png-and-vector.png" width="17px" height="18px"> Open form</button>
+<div class="pop" id="popup">
+<form>
+	<h2> Login </h2>
+	<label> <span> <i class="fa fa-user"> </i> </span>  Username </label>
+	<input type="text" name="usrname" placeholder="-usrname-" required><br>
+	<label> <span> <i class="fa fa-key"> </i></span> Password</label>
+	<input type="Password" name="password" placeholder=" **** " minlength="8" required><br>
+	<button type="submit" class="login"> <span> <i class="fa fa-sign-in"> </i> </span> login </button><br>
+	<button type="submit" onclick="closeform()" class="close"> <span> <i class="fa fa-window-close-o"></i> </span> Close </button>
+</form>
+</div>
+
+</body>
+	</html>
