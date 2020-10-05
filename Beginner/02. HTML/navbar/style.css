@@ -8,26 +8,36 @@
 
 body{
   height: 100vh;
-  background-color:#f6e58d;
-  font-family: 'Rye', cursive;
+  background-color: black;
+  font-family: 'PT Serif', serif;
 }
 
 .hack{
   text-decoration: none;
+  font-size: 3rem;
+  color: #431259;
 }
 
-.content{
-  margin-top: 150px;
+.content h1{
+  margin-top: 220px;
   text-align: center;
-  font-family: 'Rye', cursive;
+  font-family: 'Acme', sans-serif;
   font-size: 50px;
+  color: #73d2de;
+  font-size: 5rem;
 }
 
+.content h3{
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
 
-a,button{
-  /* font-family:'Montserrat', sans-serif; */
-  font-family: 'Rye', cursive;
-  color: #000;
+button{
+  color: #d90368;
+  font-family: 'Bangers', cursive;
 }
 
 .dropdown{
@@ -35,8 +45,10 @@ a,button{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
+  background-color: #73d2de;
+  font-family: 'PT Serif', serif;
 }
 
 .products,
@@ -88,7 +100,7 @@ a,button{
   border: none;
   color: #000;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 25px;
   cursor: pointer;
 }
 
