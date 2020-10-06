@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class LowestCA {
+	Scanner s = new Scanner(System.in);
+	private class BinaryTree {
+		private class Node {
+			int data;
+			Node left;
+			Node right;
+
+			Node(int data, Node left, Node right) {
+				this.data = data;
+				this.left = null;
+				this.right = null;
+			}
+		}
+
+		private Node root;
+		int size;
+
+		public BinaryTree() {
+			this.root = this.takeInput(s, null, false);
+		}
+
+		private Node takeInput(Scanner s, Node parent, boolean isLeftorRight) {
+
+			int data = s.nextInt();
+			Node node = new Node(data, null, null);
+			size++;
+			boolean choice = false;
+			choice = s.nextBoolean();
+			if (choice) {
+				node.left = this.takeInput(s, node, false);
+			}
+			choice = false;
+			choice = s.nextBoolean();
+			if (choice) {
+				node.right = this.takeInput(s, node, true);
+			}
+
+			return node;
+		}
+	 public void LCA(){
+		 int a=s.nextInt();
+		 int b=s.nextInt();
+		 System.out.println(LCA(a,b,this.root).data);
+	 }
+	 private Node LCA(int a,int b,Node node){
+		 if(node==null){
+			 return null;
+		 }
+		 if(node.data==a||node.data==b){
+			 return node;
+		 }
+		 Node left=LCA(a,b,node.left);
+		 Node right= LCA(a,b,node.right);
+		 if(left==null){
+			 return right;
+		 }
+		 if(right==null){
+			 return left;
+		 }
+		 return node;
+	 }
+	}
+	 public static void main(String[] args){
+			LowestCA m= new LowestCA();
+			BinaryTree b1= m.new BinaryTree();
+			b1.LCA();
+		 }
+}
