@@ -4,14 +4,14 @@ def binary_search(array, ele):
 
     low = 0
     high = len(array)-1
-
+    index = -1
     while(low <= high):
         # finding mid
         mid = (low+(high-low)//2)
 
         # comparing element with the middle value of array
         if array[mid] == ele:
-            return mid
+            index = mid
 
         elif array[mid] > ele:
             high = mid-1
@@ -20,7 +20,7 @@ def binary_search(array, ele):
             low = mid+1
 
     # if we are here we surely did not find the element
-    return -1
+    return index
 
 # Driver Code
 
