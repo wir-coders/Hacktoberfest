@@ -17,7 +17,6 @@ namespace FirstCharUpperCase
         public string UpperCase(string sentence)
         {
             return char.ToUpper(sentence[0]) + sentence.Substring(1);
-
         }
     }
 }
