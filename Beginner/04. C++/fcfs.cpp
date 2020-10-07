@@ -24,7 +24,6 @@ for(i=0;i<4;i++)
 {
 arr2[i]=arr[i]+arr1[i];
 }
-
 cout<<"P"<<"  "<<"B.T"<<"  "<<"W.T"<<"  "<<"TAT"<<endl;
 for(i=0;i<4;i++)
 {
@@ -32,8 +31,8 @@ cout<<i<<"  "<<arr[i]<<"    "<<arr1[i]<<"     "<<arr2[i]<<endl;
 }
 cout<<"gant chart:"<<endl;
 for(i=0;i<4;i++)
-{cout<<"|"<<i;
-
+{
+  cout<<"|"<<i;
 for(j=0;j<arr[i];j++)
 {
 cout<<" ";
