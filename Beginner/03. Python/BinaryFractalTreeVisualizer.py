@@ -13,15 +13,15 @@ def init():
     t.setheading(90)
 
 
-def branch(len, angle):
-    if len > 10:
-        t.forward(len)
+def branch(l, angle):
+    if l > 10:
+        t.forward(l)
         t.right(angle)
-        branch(len-15, angle)
+        branch(l-15, angle)
         t.left(2*angle)
-        branch(len-15, angle)
+        branch(l-15, angle)
         t.right(angle)
-        t.back(len)
+        t.back(l)
 
 init()
 branch(100, 30)   ##takes length and angle in that order
