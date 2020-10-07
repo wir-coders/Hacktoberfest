@@ -5,7 +5,7 @@ class BubbleSort {
             val array = arrayOf(64, 34, 25, 12, 22, 11, 90)
             println("Before Sorted")
             printArray(array)
-            
+
 	    bubbleSort(array)
             println("Sorted Array")
             printArray(array)
