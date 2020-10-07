@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather App</title>
+  <meta name="description" content="Weather App | prognoza pogody dla Twojego miasta">
+  <meta name="keywords" content="Weather App, prognoza pogody, pogoda, meteo">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Lato:400,700&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/9b2aac655c.js" crossorigin="anonymous"></script>
+  <!-- Google maps JS Library - Searching is slower or blocked, so no good-->
+  <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuAABhtQXXLctkl_09HcEkYWyQjvK6g4c&libraries=places"></script>-->
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="contener">
+    <!--Mode change-->
+    
+
+    <!-- Alternative Navbar for social media and changing styles -->
+    <!--
+        <nav>
+          <div id="socialIcons"> 
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+          <div id="menu">
+            <ul>
+              <li>Choose style: </li>
+              <li id="dark" onclick="dark()"><a href="#">DARK</a></li>
+              <li id="bright" onclick="bright()"><a href="#">BRIGHT</a></li>
+              <li id="bright" onclick="byDefault()"><a href="#">DEFAULT</a></li>
+            </ul> 
+          </div>
+        </nav>
+    -->
+
+    <!-- Video background responding to search result -->
+    
+    <!-- Header & search-box -->
+    <div class="header">
+      <header>weather app</header>
+    </div>
+    <section class="search-box">
+      <div class="input-group">
+        <input class="form-control" id="search-city" type="search" placeholder="Search place" aria-label="search" >
+        <div class="input-group-append">
+          <button class="btn btn-secondary" id="button" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Current weather panel / slider -->
+    <main class="main-panel rounded-lg">
+      <div class="slider-container">
+        <!-- Location -->
+        <div class="wrapper pt-3 pb-3 d-flex flex-column flex-nowrap justify-content-center align-items-center text-center">
+          <h1 class="data mb-0" id="city1">-</h1>
+          <div class="icon-and-temperature pb-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center col-12">
+            <div>
+              <img src="icons/unknown.png" id="weather-icon" alt="ikona-pogody">
+            </div>
+            <div>
+              <h2 class="data mb-0" id="city1-temperature">-</h2>
+            </div>
+          </div>
+
+          <div class="details pt-2 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center col-12">
+            <div class="details-label">
+              <p>Pressure:</p>
+            </div>
+            <div class="city1-details-value-1 details-value">
+              <p class="data" id="city1-pressure">-</p>
+            </div>
+          </div>
+
+          <div class="details pt-2 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center col-12">
+            <div class="details-label">
+              <p>Wind:</p>
+            </div>
+            <div class="city1-details-value-2 details-value">
+              <p class="data" id="city1-wind">-</p>
+            </div>
+          </div>
+
+          <div class="details pt-2 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center col-12">
+            <div class="details-label">
+              <p>Humidity:</p>
+            </div>
+            <div class="city1-details-value-3 details-value">
+              <p class="data" id="city1-clouds">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Weather forecast panel / slider -->
+    <section>
+      <div class="f-panel rounded-lg">
+        <div class="f-container pb-5">
+          <input type="radio" name="images" id="f-id1" checked>
+          <input type="radio" name="images" id="f-id2">
+          <input type="radio" name="images" id="f-id3">
+
+          <!-- Forecast: timestamp1-4 -->
+          <div class="f-slide pt-3 pb-4" id="f-one">
+            <label for="f-id3" class="f-previous"></label>
+            <label for="f-id2" class="f-next"></label>
+            <div class="f-wrapper flex-column flex-nowrap justify-content-center align-items-center text-center col-12">
+              <h3 class="nextDays mb-0 pb-1">next 36 hrs:</h3>
+
+              <!-- timestamp1 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp1">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp1icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp1temperature">-</h5>
+              </div>
+              <!-- timestamp2 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp2">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp2icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp2temperature">-</h5>
+              </div>
+              <!-- timestamp3 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp3">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp3icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp3temperature">-</h5>
+              </div>
+              <!-- timestamp4 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp4">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp4icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp4temperature">-</h5>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- Forecast: timestamp 5-8 -->
+          <div class="f-slide pt-3 pb-4" id="f-two">
+            <label for="f-id1" class="f-previous"></label>
+            <label for="f-id3" class="f-next"></label>
+            <div class="f-wrapper flex-column flex-nowrap justify-content-center align-items-center text-center col-12">
+              <h3 class="nextDays mb-0 pb-1">next 36h:</h3>
+              <!-- timestamp5 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp5">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp5icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp5temperature">-</h5>
+              </div>
+              <!-- timestamp6 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp6">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp6icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp6temperature">-</h5>
+              </div>
+              <!-- timestamp7 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp7">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp7icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp7temperature">-</h5>
+              </div>
+              <!-- timestamp8 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp8">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp8icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp8temperature">-</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Forecast: timestamp9-12 -->
+          <div class="f-slide pt-3 pb-4" id="f-three">
+            <label for="f-id2" class="f-previous"></label>
+            <label for="f-id1" class="f-next"></label>
+            <div class="f-wrapper flex-column flex-nowrap justify-content-center align-items-center text-center col-12">
+              <h3 class="nextDays mb-0 pb-1">Next 36hr</h3>
+              <!-- timestamp9 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp9">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp9icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp9temperature">-</h5>
+              </div>
+              <!-- timestamp10 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp10">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp10icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp10temperature">-</h5>
+              </div>
+              <!-- timestamp11 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp11">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp11icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp11temperature">-</h5>
+              </div>
+              <!-- timestamp12 -->
+              <div class="timestamp pt-1 d-flex flex-row flex-nowrap justify-content-center align-items-center text-center">
+                <h4 class="data mb-0 col-6" id="timestamp12">-</h4>
+                <div class="pl-1 pr-1 col-2">
+                  <img src="icons/unknown.png" class="timestampIMG" id="timestamp12icon" alt="">
+                </div>
+                <h5 class="data mb-0 col-6 pl-5 text-left" id="timestamp12temperature">-</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider navigation -->
+          <div class="f-nav">
+            <label for="f-id1" class="f-dots" id="f-dot1"></label>
+            <label for="f-id2" class="f-dots" id="f-dot2"></label>
+            <label for="f-id3" class="f-dots" id="f-dot3"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body></html>
