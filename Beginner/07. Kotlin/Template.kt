@@ -5,7 +5,7 @@ open class	Test123{
 		print("Chat Spam, So bad LUL @AdmiralBulldog")
 	}
 }
-class ABC : Test123(){
+class ABC : plebs(){
 
 }
 
