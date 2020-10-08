@@ -3,11 +3,6 @@ var time={
     m:0,
     s:0
 }
-var temporaryTime={
-    h:0,
-    m:0,
-    s:0
-}
 const numbersTimer = (el) => {
     if(el.value.length<2){
         el.value='0'+el.value;
