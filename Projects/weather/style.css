@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background:linear-gradient(-120deg, #ba0c2f, #ffcd00, #c9c9c9);
+}
+
+div.contener {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: url("img/autumn.jpg") center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+div.header {
+  width: 500px;
+  max-width: 85vw;
+}
+
+header {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: none;
+  outline: none;
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.8em;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+    -webkit-transform: translateY(256px);
+    transform: translateY(256px);
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+    -webkit-transform: translateY(256px);
+    transform: translateY(256px);
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+.search-box {
+  width: 500px;
+  max-width: 85vw;
+  height: auto;
+  margin-top: 2vh;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+input#search-city {
+  text-align: center;
+}
+
+/* Current weather panel / slider */
+main.main-panel {
+  width: 500px;
+  max-width: 85vw;
+  max-height: 100%;
+  margin-top: 2vh;
+  color: black;
+  outline: none;
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+div.slider-container {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  min-height: 15em;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 1);
+  border: none;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+input#id1,
+input#id2,
+input#id3 {
+  display: none;
+}
+
+div.wrapper {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Current weather - data & icons formatting */
+div.slide_img,
+div.slide_img > *,
+div.wrapper,
+div.wrapper > *,
+div.icon-and-temperature,
+div.icon-and-temperature > *,
+div.details,
+div.details > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+h1 {
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5em;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #333333;
+}
+
+img#weather-icon {
+  width: 2.8em;
+  height: 2.8em;
+}
+
+h2 {
+  font-size: 2.8em;
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+div.details > * {
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-size: 1.05em;
+}
+
+p {
+  margin-bottom: 0;
+  line-height: 105%;
+}
+
+/* Weather forecast panel / slider */
+div.f-panel {
+  width: 500px;
+  max-width: 85vw;
+  max-height: 100%;
+  margin-top: 2vh;
+  border: none;
+  outline: none;
+  background-color: rgba(250, 250, 250, 1);
+  color: #333333;
+  -webkit-animation: fadeIn;
+  animation: fadeIn;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+div.f-container {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  min-height: 15em;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 1);
+  color: #333333;
+  border: none;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+input#f-id1,
+input#f-id2,
+input#f-id3 {
+  display: none;
+}
+
+div.f-slide {
+  position: absolute;
+  width: 500px;
+  max-width: 85vw;
+  height: 100%;
+  padding: 1em 3em;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+label.f-previous,
+label.f-next {
+  width: 2.75em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 0;
+  z-index: 99;
+  cursor: pointer;
+  -webkit-transform: 0.3s;
+  -ms-transform: 0.3s;
+  transform: 0.3s;
+}
+
+label.f-previous {
+  left: 0;
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+}
+
+label.f-next {
+  right: 0;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+
+label.f-previous:hover,
+label.f-next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.f-wrapper {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+div.f-slide,
+div.f-slide > *,
+div.f-wrapper,
+div.f-wrapper > *,
+div.f-icon-and-temperature,
+div.f-icon-and-temperature > *,
+div.f-details,
+div.f-details > *,
+div.f-next-day-1,
+div.f-next-day-2,
+div.f-next-day-3,
+div.f-next-day-4,
+div.f-next-day-5 > *,
+h3,
+h4,
+h5,
+label.f-dots {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+div.f-slide {
+  position: absolute;
+  width: 500px;
+  max-width: 85vw;
+  height: 100%;
+  z-index: -1;
+}
+
+div.f-details {
+  margin: 0 auto;
+}
+
+h3#nextDays {
+  color: #333333;
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9em;
+  word-break: break-word;
+}
+
+div.timestamp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 91.66%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  -webkit-box-flex: 4;
+  -ms-flex: 4 1 100%;
+  flex: 4 1 100%;
+}
+
+img[id*="timestamp"] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 2 100%;
+  flex: 1 2 100%;
+  height: 1.6em;
+  width: 1.6em;
+}
+
+h5 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 2 100%;
+  flex: 1 2 100%;
+  font-size: 1.1em;
+  font-family: 'Lato', 'Didact Gothic', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Weather forecast - navigation */
+div.f-nav {
+  position: absolute;
+  bottom: 1em;
+  padding-top: 1em;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+
+label.f-dots {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transform: 0.3s;
+  -ms-transform: 0.3s;
+  transform: 0.3s;
+}
+
+label.f-dots:hover {
+  background-color: #f4a71d;
+  cursor: pointer;
+}
+
+#f-id1:checked ~ #f-one,
+#f-id2:checked ~ #f-two,
+#f-id3:checked ~ #f-three {
+  z-index: 9;
+}
+
+#f-id1:checked ~ .f-nav #f-dot1,
+#f-id2:checked ~ .f-nav #f-dot2,
+#f-id3:checked ~ .f-nav #f-dot3 {
+  background-color: #ffc600;
+}
+
+/* Media */
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  nav#modeChange {
+    width: 42px;
+    height: 150px;
+    top: 37%;
+    right: 0;
+    border-bottom-left-radius: 21px;
+    border-top-left-radius: 21px;
+    text-align: right;
+  }
+
+  nav#modeChange > * {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 2px 5px 2px 2px;
+  }
+
+  h6 {
+    top: 0 px;
+    right: 18px;
+    font-size: 8.5px;
+    text-align: center;
+    line-height: 120%
+  }
+
+  div#dark {
+    top: 20%;
+    right: 0;
+  }
+
+  div#bright {
+
+    top: 45%;
+    right: 0;
+
+  }
+
+  div#default {
+
+    top: 70%;
+    right: 0;
+
+  }
+
+}
+
+@media only screen and (max-width: 832px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 703px) {
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  html {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 0.4rem;
+  }
+}
