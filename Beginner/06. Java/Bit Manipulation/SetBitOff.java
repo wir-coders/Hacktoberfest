@@ -3,7 +3,7 @@ import java.util.Scanner;
 to 1 or vice-versa.
 * */
 public class SetBitOff{
-    public static void main(String[] args) {
+    public static void main(String[] args) { ;
         Scanner sc = new Scanner(System.in);
         //Take input from the user for toggling the Bit
         System.out.println("Enter the no to be turned off");
