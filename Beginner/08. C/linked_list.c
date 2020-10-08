@@ -17,11 +17,11 @@ int main () {
   int i, data;
 
   for (;;) {
-    printf("1. Insert an element at the beginning of linked list.\n");
-    printf("2. Insert an element at the end of linked list.\n");
+    printf("1. Insert an element at the start\n");
+    printf("2. Insert an element at the end\n");
     printf("3. Traverse linked list.\n");
-    printf("4. Delete an element from beginning.\n");
-    printf("5. Delete an element from end.\n");
+    printf("4. Delete an element from start\n");
+    printf("5. Delete an element from end\n");
     printf("6. Exit\n");
 
     scanf("%d", &i);
