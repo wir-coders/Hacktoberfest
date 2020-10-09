@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        div#timerContainer{
+            display: flex;
+            width: 450px;
+            height: 150px;
+            flex-wrap: wrap;
+        }
+        div#timerContainer > div{
+            width: 32%;
+            padding: 0;
+            border:1px solid black;
+            font-size:110px;
+            text-align: center;
+        }
+        div#timerContainer > div > input{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-size:110px;
+            text-align: center;
+            -moz-appearance: textfield;
+            border: 0;
+        }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        } 
+    </style>
+</head>
+<body>
+    <div id='timerContainer'>
+        <div id='hoursContainer'><input id='hours' value=00 type=number><div id='hoursShow'></div></div>
+        <div id='minutesContainer'><input id='minutes' value=00 type=number><div id='minutesShow'></div></div>
+        <div id='secondsContainer'><input id='seconds' value=00 type=number><div id='secondsShow'></div></div>
+    </div>
+    <button id=start>Start Timer</button>
+</body>
+<script src='main.js'></script>
+</html>
