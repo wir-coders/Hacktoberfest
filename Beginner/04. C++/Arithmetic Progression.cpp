@@ -2,10 +2,6 @@
 
 using namespace std;
 
-// for arithmetic  progression there will a starting number , common difference and ending number
-
-// AP = a+d till n;
-
 //Time Complexity - O(N)
 
 int main()
