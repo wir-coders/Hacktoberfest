@@ -1,11 +1,10 @@
-#include<iostream> // Header file
+#include<iostream>
 
 using namespace std;
 
-int main() // main method
+int main()
 {
-    cout << "Hello,World!" << endl;// prints Hello,World
-    cout << "Hello,World! \n"; //It also prints Hello,World
-    return 0; // successful termination
+    cout << "Hello,World!"<<endl;
+    return 0;
 
 }
