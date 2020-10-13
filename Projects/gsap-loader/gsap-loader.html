@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #fff;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      id="mainSVG"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="200 150 400 300"
+    >
+      <defs>
+        <g id="container" filter="url(#goo)">
+          <path class="seg" d="M412.9,251.7c-4.1-1.1-8.5-1.7-12.9-1.7" />
+        </g>
+        <filter
+          id="goo"
+          color-interpolation-filters="sRGB"
+          filterUnits="objectBoundingBox"
+          x="-100%"
+          y="-100%"
+          width="250%"
+          height="250%"
+        >
+          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9"
+            result="cm"
+          />
+          <feBlend />
+        </filter>
+        <radialGradient
+          id="grad"
+          cx="400.5176"
+          cy="298.0287"
+          r="125.9247"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.39" style="stop-color: #ff4f59" />
+          <stop offset="0.45" style="stop-color: #fffc31" />
+        </radialGradient>
+      </defs>
+      <g id="wrapper">
+        <use
+          x="20"
+          y="20"
+          xlink:href="#container"
+          fill="none"
+          stroke-width="20"
+          stroke-miterlimit="10"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke="#5B1E00"
+          opacity="0.05"
+        />
+        <use
+          xlink:href="#container"
+          fill="none"
+          stroke-width="20"
+          stroke-miterlimit="10"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke="url(#grad)"
+        />
+      </g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script>
+      let select = (s) => document.querySelector(s),
+        selectAll = (s) => document.querySelectorAll(s),
+        mainSVG = select("#mainSVG"),
+        container = select("#container"),
+        seg = select(".seg"),
+        allSegs = [];
+
+      gsap.set("svg", {
+        visibility: "visible",
+      });
+      let num = 360 / 15;
+      let duration = 0.25;
+      allSegs.push(seg);
+
+      for (var i = 1; i < num - 8; i++) {
+        let clone = seg.cloneNode(true);
+        container.appendChild(clone);
+        gsap.set(clone, {
+          rotation: i * 15,
+          svgOrigin: "400 300",
+        });
+        allSegs.push(clone);
+      }
+      let mainTl = gsap.timeline({});
+
+      allSegs.forEach((item, count) => {
+        let tl = gsap.timeline();
+        tl.to(item, {
+          rotation: "-=120",
+          svgOrigin: "400 300",
+          repeat: -1,
+          repeatRefresh: true,
+          ease: "sine.inOut",
+          repeatDelay: (num - 10) * duration,
+        });
+        mainTl.add(tl, count * duration);
+      });
+
+      gsap.to(
+        container,
+        {
+          duration: 1,
+          rotation: 360,
+          svgOrigin: "400 300",
+          ease: "linear",
+          repeat: -1,
+        },
+        0
+      );
+
+      gsap.globalTimeline.timeScale(0.5);
+    </script>
+  </body>
+</html>
