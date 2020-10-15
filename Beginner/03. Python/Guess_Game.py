@@ -9,6 +9,7 @@ user_name = input("Enter your name : ")
 
 def getMode():
     print("Option A: Easy", "Option B: Hard", sep='\n')
+#     change input to upper case, to avoid case 
     mode = input("select mode:").upper()
     if mode == 'A':
         mode = "Easy"
