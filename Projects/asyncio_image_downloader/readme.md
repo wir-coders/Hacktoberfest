@@ -1,4 +1,5 @@
 ## Example Image Scraping using Asyncio, Aiohttp
+It download image from www.thiswaifudoesnotexist.net using async function
 #### Usage:
 `bash
 python <filename>.py 
