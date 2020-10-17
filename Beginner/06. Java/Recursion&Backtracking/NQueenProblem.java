@@ -1,14 +1,14 @@
 // N-Queen Problem using Backtracking
 /*
 The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two queens attack each other.
-The solution uses Backtracking to solve the problem.
+The uses Backtracking to solve the problem.
 The expected output will contain all possible positions to place the queens.
            
 */
 
 import java.util.*;
 
-public class Solution
+public class NQueenProblem
 {  
 
 public static void main(String [] args){
@@ -84,7 +84,6 @@ public static void NQueen(boolean[][] board, int row, int col, int queensPlaced,
 			}
 			r--;
 			c++;
-			;
 		}
 		return true;
 	}
