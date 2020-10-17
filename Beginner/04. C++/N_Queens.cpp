@@ -4,7 +4,6 @@ using namespace std;
  
 
 bool isSafe(vector<vector<int>> &v, int i,int j){
-
     for(int x=0;x<i;x++){
         if(v[x][j]==1)
             return false;
@@ -33,9 +32,7 @@ bool isSafe(vector<vector<int>> &v, int i,int j){
 
 
 bool solveNqueens(vector<vector<int>> &v, int index){
-
     if(index == v.size()){
-        
         for(int i=0;i<v.size();i++){
             for(int j =0;j<v.size();j++){
                 if(v[i][j]==1)
@@ -51,9 +48,7 @@ bool solveNqueens(vector<vector<int>> &v, int index){
     }
 
     for(int j=0;j<v.size();j++){
-
         if(isSafe(v,index,j)){
-
             // putting queen on i,j 
             v[index][j] =1;
 
@@ -64,7 +59,6 @@ bool solveNqueens(vector<vector<int>> &v, int index){
             if(isValidMove){
                 return true;
             }
-
             // Means i,j is not the right path so backtrack;
             v[index][j]=0;
         }
@@ -90,7 +84,7 @@ int main()
 } 
 
 
-Q _ _ _ _ 
+// Q _ _ _ _ 
 // _ _ Q _ _ 
 // _ _ _ _ Q 
 // _ Q _ _ _ 
