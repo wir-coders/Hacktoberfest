@@ -1,0 +1,257 @@
+[33mcommit eb491637f2e316b261c162a340857a33c2e5c670[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mupstream/master[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: f4a154b 3dbd5ba
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Fri Oct 16 10:12:15 2020 -0700
+
+    Merge pull request #254 from thebit1701/master
+    
+    Python Programs
+
+[33mcommit 3dbd5baaac1adb9d7a09f3e3d471efbf2844a08b[m
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Fri Oct 16 10:11:48 2020 -0700
+
+    Delete CutAndAdd.ipynb
+
+[33mcommit f4a154b08838b1f93373f6e18787fd732ca79a7e[m
+Merge: 8337a74 d3ff9d7
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Fri Oct 16 10:06:34 2020 -0700
+
+    Merge pull request #243 from knrobitaille/kr-contribution
+    
+    added Duplicate_letter_checker.py
+
+[33mcommit 33f367dcb112ef17b82d578963c755f6a9bb3002[m
+Author: Vishal Arya <53190675+thebit1701@users.noreply.github.com>
+Date:   Fri Oct 16 15:00:31 2020 +0530
+
+    Parenthesis_Balanced or Not
+
+[33mcommit a634e90e13254a78c9a569de255f1fd329c3bca3[m
+Author: Vishal Arya <53190675+thebit1701@users.noreply.github.com>
+Date:   Fri Oct 16 14:56:23 2020 +0530
+
+    String Problem
+
+[33mcommit 55f2241b97117b268768af43b02090852d947d19[m
+Author: Vishal Arya <53190675+thebit1701@users.noreply.github.com>
+Date:   Fri Oct 16 14:54:56 2020 +0530
+
+    String Problem
+
+[33mcommit d3ff9d7dadfc5033b281051cd603b81b7383c761[m
+Author: Kevin Robitaille <knrobitaille@gmail.com>
+Date:   Wed Oct 14 13:29:37 2020 -0400
+
+    added Duplicate_letter_checker.py
+
+[33mcommit 8337a740b32bbd22c9524ccabf573f350a6de75d[m
+Merge: f6e01ab 9192ce2
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Wed Oct 14 07:47:02 2020 -0700
+
+    Merge pull request #241 from naumanahmad9/add-gsap-loader
+    
+    add gsap loader
+
+[33mcommit f6e01ab5f0347927a23e814eada85ea2a2abbdc9[m
+Merge: c8f91e0 41100c0
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Wed Oct 14 07:46:09 2020 -0700
+
+    Merge pull request #240 from Bhaskar-maity/master
+    
+    Adding a small project Turtle race game in PYTHON
+
+[33mcommit 9192ce25596086c826a71401f5b42c9a02024a6d[m
+Author: Nauman Ahmad <tnsd995@gmail.com>
+Date:   Wed Oct 14 01:49:43 2020 +0500
+
+    add gsap loader
+
+[33mcommit 41100c0ebc6b3cad15b36e664a0f13c4c69d29d4[m
+Author: Bhaskar Maity <maitybhaskar2015@gmail.com>
+Date:   Tue Oct 13 22:57:23 2020 +0530
+
+    prev change del
+
+[33mcommit 6d930caae2d62679d8041ff686f9dfea428a196c[m
+Author: Bhaskar Maity <maitybhaskar2015@gmail.com>
+Date:   Tue Oct 13 22:52:21 2020 +0530
+
+    add project image, source code in project fol
+
+[33mcommit 23d3056b249ef33783e601f304bd7ed2a1172b4d[m
+Author: Bhaskar Maity <maitybhaskar2015@gmail.com>
+Date:   Tue Oct 13 22:43:44 2020 +0530
+
+    Add Turtle race game PYTHON
+
+[33mcommit c8f91e03c6a2fbfd45ea05db89ac2e128fc6e16f[m
+Merge: e83dd0d 10692ac
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:27:37 2020 -0700
+
+    Merge pull request #238 from TheThakurSahab/CheckPrime
+    
+    Check prime
+
+[33mcommit 10692ac22f72d8330602d9f519de2140ae248442[m
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:27:21 2020 -0700
+
+    Delete SetBitOff.java
+
+[33mcommit e83dd0d65f1f3cdfe728a6e083b25b7be5e64764[m
+Merge: 131a4c9 5be8d91
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:25:35 2020 -0700
+
+    Merge pull request #232 from phanatagama/phanatagama-patch-1
+    
+    added prime number checker program
+
+[33mcommit 131a4c93ebef28d135d41d17708600222f41b584[m
+Merge: b3c34c6 34a2008
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:24:43 2020 -0700
+
+    Merge pull request #231 from HalfMillennium/'hacktober_1'
+    
+    Added remove_duplicates.py
+
+[33mcommit b3c34c6cde95806fcb6d45f2ffbd20f0e69199cd[m
+Merge: 47f7096 12a265b
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:24:18 2020 -0700
+
+    Merge pull request #230 from SivaKumar2001/master
+    
+    Hello World.cpp
+
+[33mcommit 47f7096b9d7ddecf49753b4757a4c3aa2ae3d5dd[m
+Merge: 89c0566 a520197
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:22:58 2020 -0700
+
+    Merge pull request #227 from ardirama/master
+    
+    changes "add ardirama.md"
+
+[33mcommit 89c0566f2be7a51e6f176f69caae43ffdc4bacbf[m
+Merge: 1077c32 77bdb76
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:22:40 2020 -0700
+
+    Merge pull request #229 from mahimonga/patch-2
+    
+    added snake game in python.
+
+[33mcommit 1077c327349eb17097bde957fed6705d955f482f[m
+Merge: 23f1f05 327679e
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:17:47 2020 -0700
+
+    Merge pull request #150 from hafidzamr/master
+    
+    add sort array odd beginner
+
+[33mcommit 23f1f05ae5378c35d68fc8941f0931c98af423cb[m
+Merge: 1215601 91dd84c
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:17:33 2020 -0700
+
+    Merge pull request #152 from rahul149/master
+    
+    added an pattern program
+
+[33mcommit 12156011adae92388eb771208dcfbc162affe3e8[m
+Merge: 6d8063f 519d206
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:14:45 2020 -0700
+
+    Merge pull request #153 from wiredfoxterrier/master
+    
+    Basic Java Programs added
+
+[33mcommit 6d8063fa1809bd190ab2d6e7c5df21360a56da59[m
+Merge: 7d98e2e e3c317c
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:01:04 2020 -0700
+
+    Merge pull request #236 from shivam1623/h3
+    
+    Dupliacte Array
+
+[33mcommit 7d98e2e7becc98fdbbb16a7ab4dbdfde9de35305[m
+Merge: 67d1fe9 fca88b2
+Author: God-father1 <58758331+God-father1@users.noreply.github.com>
+Date:   Mon Oct 12 22:00:47 2020 -0700
+
+    Merge pull request #233 from shivam1623/master
+    
+    to check number is even or odd
+
+[33mcommit 3299c6f79fd298bbb5aca0576e56023896cf6f3a[m
+Author: Akash Singh <thethakursaahab@outlook.com>
+Date:   Tue Oct 13 01:54:24 2020 +0530
+
+    Create checkPrime.Java
+
+[33mcommit e3c317c1feec5fbbfce0ee1fee1915f6f1ff0fa6[m
+Author: shivam1623 <60954041+shivam1623@users.noreply.github.com>
+Date:   Mon Oct 12 15:52:16 2020 +0530
+
+    Create duplicate array.cpp
+
+[33mcommit ac278168c06419b7cf13db9f32dcef7bf60ca02d[m
+Author: shivam1623 <60954041+shivam1623@users.noreply.github.com>
+Date:   Mon Oct 12 15:49:43 2020 +0530
+
+    Create array.cpp
+
+[33mcommit fca88b23dcb90c6f1661913b5280be4b0fe33287[m
+Author: shivam1623 <60954041+shivam1623@users.noreply.github.com>
+Date:   Mon Oct 12 15:44:32 2020 +0530
+
+    to check given number is prime or not
+
+[33mcommit 500d92208c042f22843d705f97e04ea4c24e5c44[m
+Author: shivam1623 <60954041+shivam1623@users.noreply.github.com>
+Date:   Mon Oct 12 15:38:22 2020 +0530
+
+    to check number is even or odd
+
+[33mcommit 5be8d91e3cce644fec075091db8cf5174dac6e9b[m
+Author: phanatagama <48324618+phanatagama@users.noreply.github.com>
+Date:   Mon Oct 12 08:01:47 2020 +0000
+
+    added prime number checker program
+    
+    algorithm to determine whether a number is a prime number
+
+[33mcommit 34a2008bd380649a77bb6a1f3e5e4d8376e58050[m
+Author: Garrett Chestnut <gchestnu@stevens.edu>
+Date:   Sun Oct 11 22:06:12 2020 -0400
+
+    Added remove_duplicates.py
+
+[33mcommit 12a265bdde72bd0624e427ef9c6e8d445c976a1b[m
+Merge: 52b3d34 5c93b5a
+Author: Siva Kumar G <61716135+SivaKumar2001@users.noreply.github.com>
+Date:   Sun Oct 11 23:51:34 2020 +0530
+
+    Merge pull request #4 from SivaKumar2001/SivaKumar2001-patch-4
+    
+    Update Arithmetic Progression.cpp
+
+[33mcommit 5c93b5a119620852c4d64dee027f4ab4cdace858[m
+Author: Siva Kumar G <61716135+SivaKumar2001@users.noreply.github.com>
+Date:   Sun Oct 11 23:51:22 2020 +0530
+
+    Update Arithmetic Progression.cpp
+
+[33mcommit 52b3d34c82cb85dfe626cde66dcfe47a09c0b261[m
+Merge: 4223dd2 0d32ae2
+Author: Siva Kumar G <61716135+SivaKumar2001@users.nore

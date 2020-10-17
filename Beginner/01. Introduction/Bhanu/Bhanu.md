@@ -1,0 +1,6 @@
+- Name - Bhanu Teja
+- Profile Image - Bhanu.jpg
+- Academic Institution - Amrita University
+- Email - k.bhanuteja2001@gmail.com
+- Interests - Machine Learning
+- Quote - "Self discipline is the key to success."
