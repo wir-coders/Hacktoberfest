@@ -21,10 +21,10 @@ def check_num(number):
 def print_fizz_nums(start: int, end: int):  # this means it only takes integer as parameters
     if start == end:  # this is the stop condition of recursion which must be there whenever using recursion
         return
-    else:
-        start += 1  # since I started with 0 incrementing it by 1
-        check_num(start)  # this will evaluate the value of the "start" and print according to the condition stated
-        print_fizz_nums(start, end)  # recursion function calling itself
+  
+    start += 1  # since I started with 0 incrementing it by 1
+    check_num(start)  # this will evaluate the value of the "start" and print according to the condition stated
+    print_fizz_nums(start, end)  # recursion function calling itself
 
 
 if __name__ == '__main__':
