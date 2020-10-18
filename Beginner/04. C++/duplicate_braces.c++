@@ -27,14 +27,10 @@ int rebundable(string equation){
     int a = 0;
     int b = 0;
     for(char i : equation){
-        
         if(i == '(' || i == ')'){
             b +=1;}
-        
-       
         else if (i == '*' || i == '+' || i == '-' || i == '/'){
             a++;}
-        
     }
     if ((b/2) <= a){
             return 0;}
