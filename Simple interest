@@ -1,0 +1,13 @@
+#Python3 program to find simple interest for given given principal ammount,time and rate of interest
+def simple_interest(p,t,r):
+print('The Principal is :',p)
+print('The Time period is :',t)
+print('The Rate of interest is :',r)
+
+si = (p * t * r)/100
+
+print('The Simple Interest is :', si)
+return si
+
+#Driver code
+simple_interest(8,6,4)
