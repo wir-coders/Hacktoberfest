@@ -39,7 +39,7 @@ body {
   width: 34px;
   text-align: center;
   color: white;
-  border-width: 0px;
+  border-width: 0;
 }
 
 .digit-erase {
