@@ -1,112 +1,104 @@
-import numpy as np 
-import random 
-from time import sleep 
-  
-# Creates an empty board 
-def create_board(): 
-    return(np.array([[0, 0, 0], 
-                     [0, 0, 0], 
-                     [0, 0, 0]])) 
-  
-# Check for empty places on board 
-def possibilities(board): 
-    l = [] 
-      
-    for i in range(len(board)): 
-        for j in range(len(board)): 
-              
-            if board[i][j] == 0: 
-                l.append((i, j)) 
-    return(l) 
-  
-# Select a random place for the player 
-def random_place(board, player): 
-    selection = possibilities(board) 
-    current_loc = random.choice(selection) 
-    board[current_loc] = player 
-    return(board) 
-  
-# Checks whether the player has three  
-# of their marks in a horizontal row 
-def row_win(board, player): 
-    for x in range(len(board)): 
-        win = True
-          
-        for y in range(len(board)): 
-            if board[x, y] != player: 
-                win = False
-                continue
-                  
-        if win == True: 
-            return(win) 
-    return(win) 
-  
-# Checks whether the player has three 
-# of their marks in a vertical row 
-def col_win(board, player): 
-    for x in range(len(board)): 
-        win = True
-          
-        for y in range(len(board)): 
-            if board[y][x] != player: 
-                win = False
-                continue
-                  
-        if win == True: 
-            return(win) 
-    return(win) 
-  
-# Checks whether the player has three 
-# of their marks in a diagonal row 
-def diag_win(board, player): 
-    win = True
-    y = 0
-    for x in range(len(board)): 
-        if board[x, x] != player: 
-            win = False
-    if win: 
-        return win 
-    win = True
-    if win: 
-        for x in range(len(board)): 
-            y = len(board) - 1 - x 
-            if board[x, y] != player: 
-                win = False
-    return win 
-  
-# Evaluates whether there is 
-# a winner or a tie  
-def evaluate(board): 
-    winner = 0
-      
-    for player in [1, 2]: 
-        if (row_win(board, player) or
-            col_win(board,player) or 
-            diag_win(board,player)): 
-                 
-            winner = player 
-              
-    if np.all(board != 0) and winner == 0: 
-        winner = -1
-    return winner 
-  
-# Main function to start the game 
-def play_game(): 
-    board, winner, counter = create_board(), 0, 1
-    print(board) 
-    sleep(2) 
-      
-    while winner == 0: 
-        for player in [1, 2]: 
-            board = random_place(board, player) 
-            print("Board after " + str(counter) + " move") 
-            print(board) 
-            sleep(2) 
-            counter += 1
-            winner = evaluate(board) 
-            if winner != 0: 
+theBoard = {'7': ' ' , '8': ' ' , '9': ' ' ,
+            '4': ' ' , '5': ' ' , '6': ' ' ,
+            '1': ' ' , '2': ' ' , '3': ' ' }
+
+board_keys = []
+
+for key in theBoard:
+    board_keys.append(key)
+
+''' We will have to print the updated board after every move in the game and 
+    thus we will make a function in which we'll define the printBoard function
+    so that we can easily print the board everytime by calling this function. '''
+
+def printBoard(board):
+    print(board['7'] + '|' + board['8'] + '|' + board['9'])
+    print('-+-+-')
+    print(board['4'] + '|' + board['5'] + '|' + board['6'])
+    print('-+-+-')
+    print(board['1'] + '|' + board['2'] + '|' + board['3'])
+
+# Now we'll write the main function which has all the gameplay functionality.
+def game():
+
+    turn = 'X'
+    count = 0
+
+
+    for i in range(10):
+        printBoard(theBoard)
+        print("It's your turn," + turn + ".Move to which place?")
+
+        move = input()        
+
+        if theBoard[move] == ' ':
+            theBoard[move] = turn
+            count += 1
+        else:
+            print("That place is already filled.\nMove to which place?")
+            continue
+
+        # Now we will check if player X or O has won,for every move after 5 moves. 
+        if count >= 5:
+            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")                
                 break
-    return(winner) 
-  
-# Driver Code 
-print("Winner is: " + str(play_game()))
+            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # across the middle
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # across the bottom
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ': # down the left side
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # down the middle
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # down the right side
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break 
+            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # diagonal
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # diagonal
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break 
+
+        # If neither X nor O wins and the board is full, we'll declare the result as 'tie'.
+        if count == 9:
+            print("\nGame Over.\n")                
+            print("It's a Tie!!")
+
+        # Now we have to change the player after every move.
+        if turn =='X':
+            turn = 'O'
+        else:
+            turn = 'X'        
+    
+    # Now we will ask if player wants to restart the game or not.
+    restart = input("Do want to play Again?(y/n)")
+    if restart == "y" or restart == "Y":  
+        for key in board_keys:
+            theBoard[key] = " "
+
+        game()
+
+if __name__ == "__main__":
+    game()
