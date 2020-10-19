@@ -36,7 +36,7 @@ int main()
 {
     printf("Enter the infix expression:");
     char string[100];
-    gets(string);
+    fgets(string,100,stdin);
     n=strlen(string);
     s=(char*)malloc(n*sizeof(char));
     char res[n];
