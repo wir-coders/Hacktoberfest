@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Main from './components/main';
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "font-awesome/css/font-awesome.css";
+import { BrowserRouter } from 'react-router-dom';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
