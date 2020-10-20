@@ -1,9 +1,6 @@
 """
-
 Conversion of infix to postfix and it's evaluation
-
 """
-
 def is_operand(ch):
     if ch.isalnum():
         return True
@@ -42,10 +39,7 @@ def in_to_post(s):
         for i in range(top+1):
             ops.append(stack.pop())
             top = top -1
-
     return ops
-
-
 
 def solve(num1,num2,op):
 	num1=float(num1)
@@ -77,7 +71,5 @@ def eval_post(lst):
 			
 if __name__ == "__main__":
     string = input("Enter infix(space seperated):").split()
-
     print("Postfix = "," ".join(in_to_post(string)))
     print("ans=",eval_post(string))
-
