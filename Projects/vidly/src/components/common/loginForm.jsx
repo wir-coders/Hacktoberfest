@@ -17,7 +17,6 @@ class LoginForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const username =this.username.current.value;
         console.log("submited");
     }
     

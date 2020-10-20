@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Like from './common/like';
-import TableHeader from './common/tableHeader';
-import TableBody from './common/tableBody';
 import Table from './common/table';
 import {Link} from 'react-router-dom';
-import { fromPairs } from 'lodash';
 
 class MoviesTable extends Component {
 
@@ -19,7 +16,7 @@ class MoviesTable extends Component {
    
     render() { 
 
-        const{movies, onDelete, onLike, onSort, sortColumn} = this.props;
+        const{movies, onSort, sortColumn} = this.props;
 
         return ( 
             <Table 

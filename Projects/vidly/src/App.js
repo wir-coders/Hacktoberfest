@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import Movies from './components/movies';
 import {Route, Redirect, Switch} from 'react-router-dom';
 import Customers from "./components/customers";
