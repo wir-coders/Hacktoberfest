@@ -1,0 +1,22 @@
+def person(name,age): # position argument
+    print(name)
+    print(age)
+
+person("akshya",23)
+
+def person1(name1,age1): #keyword arguments
+    print(name1)
+    print(age1-5) #we use keyword arguments so that we don't get error
+
+person1(age1=23,name1="akshya")
+
+def person2(name2,age2=19): # default argument
+    print(name2)
+    print(age2)
+
+person2("akshya")
+
+def sum(*b): #variable length arguments usually used when we have to use multiple values)
+    c=b
+    print(c)
+sum("5,2,3,4","what", "is", "this?")
