@@ -6,8 +6,12 @@ def kadane(l): # max_ending_here, max_so_far
     a, b = 0, 0
     for i, x in enumerate(l):
         meh += x
-        if meh < 0: meh = 0; a = i + 1
-        if msf < meh: msf = meh; b = i
+        if meh < 0:
+            meh = 0
+            a = i + 1
+        if msf < meh:
+            msf = meh
+            b = i
     return msf, a, b
     
 # printing an example of the algorithm
