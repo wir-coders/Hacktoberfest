@@ -1,13 +1,10 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
-
 using namespace std;
-
 class Point{
 public:
     int x,y;
-
 };
 //sqrt(pow(p1.x-p2.x,2)+ pow(p1.y-p2.y,2))
 float distanc(Point p1,Point p2){
