@@ -1,8 +1,8 @@
 def reverse(s): 
-  str = "" 
+  s1 = "" 
   for i in s: 
-    str = i + str
-  return str
+    s1 = i + s1
+  return s1
   
 s = "I am Moksha"
   
