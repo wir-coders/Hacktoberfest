@@ -2,7 +2,6 @@ import os
 from pyad import pyad
 import pyad.adquery
 
-''' Functions for colorized output '''
 def prRed(msg):
     print("\033[91m{}\033[00m" .format(msg))
 
@@ -16,7 +15,6 @@ def getGroups(userName):
     ''' Query for logged in user AD group membership '''
     q = pyad.adquery.ADQuery()
 
-    ''' [Update base DN for your domain] '''
     q.execute_query(
         attributes = ['memberof'],
         where_clause = "samaccountname = '" + userName + "'",
@@ -44,7 +42,7 @@ def main():
     adGroups = getGroups(os.getlogin())
     print("Checking Groups:")
     print(*adminGroups,sep = "\n")
-    if checkGroupMembership(adGroups,adminGroups) == True:
+    if checkGroupMembership(adGroups,adminGroups) is True:
         prGreen("Access Granted")
     else:
         prRed("Access Denied")
