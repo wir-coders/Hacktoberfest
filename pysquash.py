@@ -7,7 +7,7 @@ Created on Wed Aug 19 19:33:42 2020
 
 import pygame
 
-import _thread
+#import _thread
 
 pygame.init() # Its a default statement, do every time
 
@@ -133,3 +133,15 @@ while True:
     ball_play.update(racket)
     racket.update()        
     pygame.display.flip()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
