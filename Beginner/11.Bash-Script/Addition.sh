@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 echo -n 'Enter the First Number: '
