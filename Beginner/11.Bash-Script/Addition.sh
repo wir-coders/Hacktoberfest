@@ -1,5 +1,5 @@
 
-#!/usr/bin/bash
+#!/bin/bash
 
 echo -n 'Enter the First Number: '
 read -r a
