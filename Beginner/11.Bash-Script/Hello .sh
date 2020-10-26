@@ -1,7 +1,8 @@
 #!/bin/bash
-# Avoid spaces around the assignment operator (=)
+
 var="Hello World"
- 
+ # Avoid spaces around the assignment operator (=)
+
 # print it 
 echo "$var"
  
