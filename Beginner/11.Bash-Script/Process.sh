@@ -1,5 +1,5 @@
 
-#!/usr/bin/bash
+#!/bin/bash
 
 echo "Hello $USER"
 
