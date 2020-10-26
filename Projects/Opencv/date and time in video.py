@@ -9,7 +9,7 @@ print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 
 while cap.isOpened():
     ret ,frame = cap.read()
-    if ret ==True:
+    if ret:
         font = cv2.FONT_HERSHEY_SIMPLEX
         text = 'Width:'+str(cap.get(3)) +'XHeight:'+str(cap.get(4))
         dd = str(datetime.datetime.now())
