@@ -16,9 +16,9 @@ while cap.isOpened():
         frame = cv2.putText(frame,dd,(10,25),font,1,(48,199,48),2,cv2.LINE_AA)
         cv2.imshow('video',frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):#while you pressing 'q' you can exit from the window 
-            break;
+            break
     else:
-        break;
+        break
 
 cap.release()
 cv2.destroyAllWindows()
