@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Temperature Converter - Kriti</title>
+    </head>
+    <body>
+        <h2>Temperature Converter:</h2>
+        <form>
+            <input type="text" id="c" name="c" onchange="convert('Ce')"> &#8451; <br> equals <br> 
+            <input type="text" id="f" name="f" onchange="convert('Fa')"> &#8457;   
+        </form>
+        <script type = "text/javascript">
+            function convert(degree){
+                var c_ID = document.getElementById("c");
+                var f_ID = document.getElementById("f");
+                if ( degree == 'Ce'){
+                    var F = c_ID.value * 9/5 +32;
+                    f_ID.value = Math.round(F);
+                }
+                else
+                {
+                    var C = (f_ID.value-32) * 5/9;
+                    c_ID.value = Math.round(C);
+                }
+            } 
+        </script>
+    </body>
+</html>
