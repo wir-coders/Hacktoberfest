@@ -1,5 +1,5 @@
 body{
-    background-color:#34495e;
+    background-color: brown;
 }
 .container{
 width:350px;
@@ -83,7 +83,7 @@ font-size:18px;
     box-sizing:border-box;
     margin-bottom:20px;
     border:2px solid #b5c5dd;
-    border-radius:10px;
+    border-radius:14px;
 }
 
 .container .controls #input:focus{
