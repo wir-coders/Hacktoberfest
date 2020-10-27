@@ -9,5 +9,5 @@ def bubbleSort(arr):
 arr = [74, 36, 15, 92, 10, 47, 82] 
 bubbleSort(arr) 
 print ("Sorted array is:") 
-for i in range(len(arr)): 
-    print (arr[i],end=" ")
+for i in arr: 
+    print (i,end=" ")
