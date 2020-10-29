@@ -49,6 +49,5 @@ for root, dirs, files in os.walk(root_dir, onerror=None):
 usernames = set(usernames)
 with open("_filenames.txt", "w") as file:
     #Creamos el archivo _usernames.txt y lo llenamos con los usernames que nos interesan
-    for user in usernames:
-        file.writelines(user + "\n")
+    file.write("\n".join(usernames))
 print("Found", len(usernames), "matching words")
