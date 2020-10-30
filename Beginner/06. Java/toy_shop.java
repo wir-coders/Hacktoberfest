@@ -1,10 +1,6 @@
-
-package demo;
-
-
 import java.util.Scanner;
 
-public class Demo {
+public class toy_shop {
 
     String[] SoftToys = {"Giant-Teddy-Bear", "Giraffe", "Cat", "Mega-Bear", "Dog", "Lion", "Billy-Bear", "Besty-Bear", "Monkey"};
 
