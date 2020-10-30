@@ -1,4 +1,5 @@
 # Python program to check if the number is an Armstrong number or not
+# 153 = 1*1*1 + 5*5*5 + 3*3*3
 
 # take input from the user
 num = int(input("Enter a number: "))
