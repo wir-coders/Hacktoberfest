@@ -150,7 +150,7 @@ body {
     }
     5%, 95% {
         color: black;
-        filter: blur(0px);
+        filter: blur(0);
         text-shadow: none;
     }
 }
