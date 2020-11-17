@@ -1,0 +1,86 @@
+import java.io.*;
+class library
+{
+    String stack_name[]= new String[10000];
+    long stack_rollno[]=new long[10000];
+    int stack_date[]=new int[10000];
+    int stack_dueDate[]=new int[10000];
+    String stack_nmbk[]=new String[10000];
+    public int top=-1;
+   InputStreamReader isr= new InputStreamReader(System.in);
+   BufferedReader br = new BufferedReader(isr);
+   public static void main(String args[])throws IOException
+   {
+          InputStreamReader isr= new InputStreamReader(System.in);
+          BufferedReader br = new BufferedReader(isr);
+        System.out.println("WELCOME TO LIBRARY PORTAL");
+        System.out.println("1.ENTER DETAILS \n 2.DUE DATE OF BOOK \n 3. FINE ACCUMULATION \n 4. TIMINGS OF LIBRARY \n 5. SEATS AVAILABLE \n 6.List of books \n 7.Add new Books \n 8.Dispaly the members");
+        int ch=Integer.parseInt(br.readLine());
+   }
+   public void details(String s,long roll_no)throws IOException
+   {
+        if(top >=10000)
+        {
+            System.out.println("PORTAL IS FILLED");
+        }
+        else
+        {
+            stack_name[++top]=s;
+            stack_rollno[++top]=roll_no;
+            System.out.println("Enter the name of book issused and enter the date in the form ddmmyy");
+            stack_nmbk[++top]=br.readLine();
+            stack_date[++top]=Integer.parseInt(br.readLine());
+        }
+   }
+   public void due_date()
+   {
+       for(int i=top;i>=0;i--)
+       {
+          int d=stack_date[i]/10000;
+          d=d+15;
+          int m=stack_date[i]/100;
+          int y=stack_date[i]%100;
+          String fd="";
+          if(m==1||m==3||m==5||m==7||m==8||m==10||m==12)
+          {
+              if(d>31)
+              {
+                d=d-31;
+                m=m+1;
+                if(m>12)
+                {
+                    y++;
+                }
+               }
+               fd=d+""+m+""+y;
+          }
+          else if(m==4||m==6||m==9||m==11)
+          {
+               if(d>30)
+              {
+                d=d-30;
+                m=m+1;
+                if(m>12)
+                {
+                    y++;
+                }
+               }
+               fd=d+""+m+""+y; 
+           }
+           else
+           {
+               if(y%4==0)
+               {
+                   d=d-29;
+                }
+                else
+                {
+                    d=d-28;
+                }
+                fd=d+""+m+""+y; 
+           }
+        
+        stack_dueDate[i]=Integer.parseInt(fd);
+        }
+   }
+}
