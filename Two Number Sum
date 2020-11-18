@@ -1,0 +1,15 @@
+#Using hashing table complexity is taken to O(n)
+
+
+def twoNumberSum(array, targetSum):
+	return Kul(array, targetSum)
+def Kul(array, targetSum):
+	values = {}
+	for n in array:
+		match = targetSum - n
+		if match in values:
+			return[match,n]
+		else:
+			values[n] = True
+			
+	return[]
